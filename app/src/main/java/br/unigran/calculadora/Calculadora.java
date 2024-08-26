@@ -1,23 +1,32 @@
 package br.unigran.calculadora;
 
 public class Calculadora {
+    Double N1,N2;
 
-    public Double soma(Double n1, Double n2){
-        return (double) (n1 + n2);
+    public String soma(String n1, String n2){
+        N1 = Double.parseDouble(n1);
+        N2 = Double.parseDouble(n2);
+        return String.valueOf(N1 + N2);
     }
 
-    public Double subtrai(Double n1, Double n2){
-        return (double) (n1 - n2);
+    public String subtrai(String n1, String n2){
+        N1 = Double.parseDouble(n1);
+        N2 = Double.parseDouble(n2);
+        return String.valueOf(N1 - N2);
     }
 
-    public Double multiplica(Double n1, Double n2){
-        return (double) (n1 * n2);
+    public String multiplica(String n1, String n2){
+        N1 = Double.parseDouble(n1);
+        N2 = Double.parseDouble(n2);
+        return String.valueOf(N1 * N2);
     }
 
-    public Double divide(Double n1, Double n2){
-        if (n2 == 0){
+    public String divide(String n1, String n2){
+        N1 = Double.parseDouble(n1);
+        N2 = Double.parseDouble(n2);
+        if (n2.equals(0)){
             return null;
         }
-        return (double) (n1 / n2);
+        return String.valueOf(N1 / N2);
     }
 }
